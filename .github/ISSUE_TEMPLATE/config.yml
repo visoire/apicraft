@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security problem
+    url: https://github.com/visoire/apicraft/security/advisories/new
+    about: Report vulnerabilities privately. Never in a public issue.
+  - name: Documentation
+    url: https://opencraft.cc/docs/
+    about: Read the API documentation first, including the error codes.
+  - name: Service status
+    url: https://opencraft.cc/status/
+    about: Check whether the service is up before reporting an outage.

@@ -1,0 +1,57 @@
+name: Feature request
+description: Suggest an endpoint, option or improvement.
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The service source is not public, so ideas are discussed here before anything is built. Not every idea will be built; reasons are always given.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the job, not the solution. "I want to know when ... so that ..."
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: How do you do it today?
+      description: And what is annoying or impossible about that.
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like instead?
+      description: A sketch of the call and the answer helps, for example `GET /api/v1/...` and the JSON you would hope for.
+      render: shell
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Releases and version checks
+        - Watchlist and automation
+        - Automation keys
+        - Craft data (apps, contributors, tracker)
+        - Dashboard and website
+        - Emails and login
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: importance
+    attributes:
+      label: How much does it matter to you?
+      options:
+        - Nice to have
+        - Would save me real time
+        - I cannot use apicraft for my case without it
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched the existing issues and the docs.
+          required: true

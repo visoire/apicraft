@@ -1,0 +1,19 @@
+apicraft documentation repository: notice and permissions
+
+Copyright (c) 2026 visoire. All rights reserved.
+
+This repository contains documentation, examples and an issue tracker for the apicraft service. The apicraft service, its server and website source code, its design and its data are NOT open source and are not licensed under this notice.
+
+Permission is granted, free of charge, to:
+
+1. Read, share and quote the documentation in this repository (README.md and the docs/ folder), provided you link back to https://github.com/visoire/apicraft.
+2. Copy and modify the code examples (the code blocks in README.md and docs/API.md) and use them in your own projects, with or without credit.
+3. Use docs/openapi.json to generate clients, tools or function definitions for calling the hosted apicraft API.
+
+Everything else is reserved. In particular you may not copy, host, resell or build a competing service from the apicraft source code, design or branding, and you may not use the name "apicraft" or the logo to suggest an official connection.
+
+Use of the hosted API is governed by the terms shown when you create an account on https://opencraft.cc.
+
+THE DOCUMENTATION AND EXAMPLES ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. THE AUTHOR IS NOT LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THEIR USE.
+
+Third-party names (ArtCraft, storytold, GitHub and others) belong to their owners; apicraft is independent and not affiliated with them.

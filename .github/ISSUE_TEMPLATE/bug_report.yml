@@ -1,0 +1,72 @@
+name: Bug report
+description: The API or the website does something wrong.
+title: "[Bug] "
+labels: ["bug", "needs-info"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **Remove your API key (`ac_...`), GitHub token and password from everything you paste.** If you leaked one by accident, revoke it now.
+        Check the [status page](https://opencraft.cc/status/) and the [docs](https://opencraft.cc/docs/) first.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does it happen?
+      options:
+        - API (api.opencraft.cc)
+        - Website or dashboard (opencraft.cc)
+        - Login, codes or emails
+        - Automation keys
+        - Craft data (apps, contributors, tracker)
+        - Badges or feeds
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: The request
+      description: Method, URL and body. A single curl command is ideal. Replace the key with YOUR_KEY.
+      render: shell
+      placeholder: curl -H "Authorization: Bearer YOUR_KEY" "https://api.opencraft.cc/api/v1/check?owner=...&repo=...&current=..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+      description: The status code and the JSON body.
+      render: json
+    validations:
+      required: true
+  - type: input
+    id: request_id
+    attributes:
+      label: Request ID
+      description: The `request_id` in the error body, or the `X-Request-ID` response header. It lets me find the request in the logs.
+      placeholder: b07683f9b7c843ca
+  - type: input
+    id: when
+    attributes:
+      label: When (with time zone)
+      placeholder: 2026-10-27 14:05 UTC
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else?
+      description: Browser and version for website problems, whether it happens every time, rate limit headers.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I removed all keys, tokens and passwords.
+          required: true
+        - label: I searched the existing issues.
+          required: true

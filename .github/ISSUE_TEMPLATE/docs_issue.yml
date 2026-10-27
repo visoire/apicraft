@@ -1,0 +1,44 @@
+name: Docs issue
+description: Something in the documentation is wrong, unclear or missing.
+title: "[Docs] "
+labels: ["docs"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where?
+      description: A link or the section name, for example "docs/API.md, section Limits".
+      placeholder: https://opencraft.cc/docs/#limits
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem?
+      options:
+        - It is wrong (the API behaves differently)
+        - It is unclear or confusing
+        - It is missing
+        - An example does not work
+        - Typo or wording
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What is the problem?
+      description: What did the docs say, what did you see, and what would have helped you? For an example that fails, paste the command (without your key) and the answer.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested wording (optional)
+      description: You can also send a pull request that changes only README.md or docs/. See CONTRIBUTING.md.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I removed all keys, tokens and passwords.
+          required: true
